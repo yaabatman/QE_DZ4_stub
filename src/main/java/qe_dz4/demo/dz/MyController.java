@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping
 public class MyController {
 
-    @PostMapping("/example")
+    @PostMapping("/stub")
     public String exampleEndpointPost(@RequestBody String body) {
         sleep(); // рандомное время обработки запроса
         String status;
@@ -31,11 +31,12 @@ public class MyController {
         ResponseData responseData = new ResponseData();
         responseData.setStatus(status);
         responseData.setToken(token);
+        responseData.setPhone(requestData.getPhone());
 
         return gson.toJson(responseData);
     }
 
-    @PutMapping("/example")
+    @PutMapping("/stub")
     public String exampleEndpointPut(@RequestBody String body) {
         sleep(); // рандомное время обработки запроса
         String status;
@@ -53,6 +54,7 @@ public class MyController {
         ResponseData responseData = new ResponseData();
         responseData.setStatus(status);
         responseData.setToken(token);
+        responseData.setPhone(requestData.getPhone());
 
         return gson.toJson(responseData);
     }

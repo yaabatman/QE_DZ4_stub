@@ -11,6 +11,10 @@ public class ResponseData {
 //        this.token = token;
 //    }
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public void setStatus(String status) {
         this.status = status;
     }
